@@ -1,0 +1,75 @@
+﻿body{
+	background-image: url("fondo/fondo.jpg");
+	background-size: 100% 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+hi{
+	color: #ABF;
+	margin: 50px 0px;
+	display: block;
+	text-align: center;
+	font-size: 80px;
+	text-shadow: 20px 0px 20px yellow;
+}
+#fotos{
+	width: 100%;
+	margin: 0px auto;
+}
+#container:after{
+	content:"";
+	display: block;
+	height: 0px;
+	clear: both;
+}
+#container{
+	width: 90%;
+	margin: 0px auto;
+}
+#container div{
+	width: 30%;
+	height: auto;
+	-webkit-transition: -webkit-transform 1s;
+	display: inline;
+	float: left;
+	margin: 0px 3% 0px 0px;
+	padding: 0px;
+}
+#container div img{
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 0px 20px blue;
+	border: 2px solid red;
+}
+img{
+	width: 350px;
+	height: 200px;
+}
+#container div img~span{
+	width: 100%;
+	heigth: auto;
+	display: block;
+	opacity: 0;
+	-webkit-transition: opacity 1s;
+	margin: 0px;
+	paddin: 2px 5px;
+	color: #FFF;
+	background: rgba(0, 0, 0, 0.7);
+	box-shadow: 0px 0px 10px #666;
+	text-align: center;
+}
+#container div img:hover+span{
+	opacity: 1;
+}
+#container:hover div{
+	opacity: 0.2;
+	-webkit-transform: scale (0.7);
+	-mstransform: scale (0.7);
+	transform: scale(0.7);
+}
+#container:hover div:hover{
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-mstransform: scale (1);
+	transform: scale(1);
+}
